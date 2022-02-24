@@ -1,0 +1,22 @@
+server:
+  port: 8888
+  tomcat:
+    url-encoding: utf-8
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/file
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+#相对路径，存放到file文件夹中
+files:
+  path:
+    upload: './src/main/resources/file'
+
