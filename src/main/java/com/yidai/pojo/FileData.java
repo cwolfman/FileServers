@@ -112,6 +112,7 @@ public class FileData {
         this.updateTime = updateTime;
     }
 
+    // 自定义Json格式
     @Override
     public String toString() {
         return "FileData{" +
