@@ -3,12 +3,12 @@
 <mapper namespace="com.yidai.dao.FileMapper">
 
 
-    <insert id="insertFileData" parameterType="com.yidai.bean.FileData" keyProperty="id">
+    <insert id="insertFileData" parameterType="com.yidai.pojo.FileData" keyProperty="id">
         insert into file_data(`size`, `type`, old_name, new_name, file_path)
         values (#{size}, #{type}, #{oldName}, #{newName}, #{filePath})
     </insert>
 
-    <select id="selectFileDataByNewNme" resultType="com.yidai.bean.FileData">
+    <select id="selectFileDataByNewNme" resultType="com.yidai.pojo.FileData">
         select *
         from file_data
         where new_name = #{newName}

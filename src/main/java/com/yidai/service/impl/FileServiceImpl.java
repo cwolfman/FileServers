@@ -1,6 +1,6 @@
 package com.yidai.service.impl;
 
-import com.yidai.bean.FileData;
+import com.yidai.pojo.FileData;
 import com.yidai.dao.FileMapper;
 import com.yidai.service.FileService;
 

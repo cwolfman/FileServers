@@ -1,6 +1,6 @@
 package com.yidai.dao;
 
-import com.yidai.bean.FileData;
+import com.yidai.pojo.FileData;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 

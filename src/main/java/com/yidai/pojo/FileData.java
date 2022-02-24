@@ -1,4 +1,4 @@
-package com.yidai.bean;
+package com.yidai.pojo;
 
 import io.swagger.annotations.ApiModelProperty;
 
