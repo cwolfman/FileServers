@@ -26,8 +26,9 @@ public class FileController {
 
     /**
      * 根据uuid获取文件信息
-     * @param newName 文件的uuid
-     * @return 文件的元数据
+     *
+     * @param newName 文件uuid
+     * @return 文件元数据
      */
     @ApiOperation(value = "根据uuid获取文件信息")
     @GetMapping("get/{uuid}")
@@ -41,6 +42,7 @@ public class FileController {
 
     /**
      * 上传文件
+     *
      * @param file 上传的文件
      * @return 返回uuid
      */

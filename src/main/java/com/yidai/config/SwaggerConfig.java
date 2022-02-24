@@ -2,6 +2,7 @@ package com.yidai.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.service.ApiInfo;
@@ -14,8 +15,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @date 2022年2月23日
  */
 @Configuration
-@EnableSwagger2
-public class Swagger2Config {
+@EnableWebMvc     //开启Swagger2
+public class SwaggerConfig {
 
     @Bean
     public Docket createRestApi() {
@@ -28,12 +29,13 @@ public class Swagger2Config {
 
     /**
      * 访问地址：http://localhost:8888/swagger-ui.html
+     * 配置Swagger信息
      */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("SpringBoot整合Swagger")
                 .description("详细请邮件咨询yidai1024@qq.com")
-                .version("1.0")
+                .version("v1.0")
                 .build();
     }
 }
