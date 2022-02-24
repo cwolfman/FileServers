@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yidai.dao.FileMapper">
 
 
     <insert id="insertFileData" parameterType="com.yidai.pojo.FileData" keyProperty="id">
         insert into file_data(`size`, `type`, old_name, new_name, file_path)
-        values (#{size}, #{type}, #{oldName}, #{newName}, #{filePath})
+        values (#{size}, #{type}, #{initialName}, #{newName}, #{filePath})
     </insert>
 
     <select id="selectFileDataByNewNme" resultType="com.yidai.pojo.FileData">

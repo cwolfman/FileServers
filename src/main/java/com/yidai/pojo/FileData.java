@@ -20,7 +20,7 @@ public class FileData {
     private String type;
 
     @ApiModelProperty(value = "文件原始名")
-    private String oldName;
+    private String initialName;
 
     @ApiModelProperty(value = "文件新名(uuid)")
     private String newName;
@@ -37,11 +37,11 @@ public class FileData {
     public FileData() {
     }
 
-    public FileData(Long id, Long size, String type, String oldName, String newName, String filePath, Date createTime, Date updateTime) {
+    public FileData(Long id, Long size, String type, String initialName, String newName, String filePath, Date createTime, Date updateTime) {
         this.id = id;
         this.size = size;
         this.type = type;
-        this.oldName = oldName;
+        this.initialName = initialName;
         this.newName = newName;
         this.filePath = filePath;
         this.createTime = createTime;
@@ -72,12 +72,12 @@ public class FileData {
         this.type = type;
     }
 
-    public String getOldName() {
-        return oldName;
+    public String getinitialName() {
+        return initialName;
     }
 
-    public void setOldName(String oldName) {
-        this.oldName = oldName;
+    public void setinitialName(String initialName) {
+        this.initialName = initialName;
     }
 
     public String getNewName() {
@@ -119,7 +119,7 @@ public class FileData {
                 "id=" + id +
                 ", size=" + size +
                 ", type='" + type + '\'' +
-                ", oldName='" + oldName + '\'' +
+                ", initialName='" + initialName + '\'' +
                 ", newName='" + newName + '\'' +
                 ", filePath='" + filePath + '\'' +
                 ", createTime=" + createTime +

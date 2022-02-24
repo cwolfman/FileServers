@@ -26,7 +26,6 @@ public class FileController {
 
     /**
      * 根据uuid获取文件信息
-     *
      * @param newName 文件uuid
      * @return 文件元数据
      */
@@ -42,7 +41,6 @@ public class FileController {
 
     /**
      * 上传文件
-     *
      * @param file 上传的文件
      * @return 返回uuid
      */
@@ -62,7 +60,6 @@ public class FileController {
 
     /**
      * 根据uuid下载文件
-     *
      * @param newName
      * @return
      */

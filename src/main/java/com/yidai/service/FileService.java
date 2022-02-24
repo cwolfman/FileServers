@@ -8,12 +8,12 @@ import java.util.Map;
 
 public interface FileService {
 
-    // 根据uuid获取文件信息
+    // 依据uuid获取文件信息
     Map getFileData(String newName);
 
     // 上传文件
     Map uploadFile(MultipartFile file);
 
-    // 根据uuid下载文件
+    // 依据uuid下载文件
     void downloadFile(String newName, HttpServletResponse rs);
 }

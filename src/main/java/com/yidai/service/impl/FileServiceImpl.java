@@ -62,11 +62,11 @@ public class FileServiceImpl implements FileService {
 
         map.put("uuid", uuid);
 
-        // 获取文件原始名
-        String oldName = file.getOriginalFilename();
+        // 获取文件初始名
+        String initialName = file.getOriginalFilename();
 
         // 获取后缀
-        String suffix = oldName.substring(oldName.lastIndexOf("."));
+        String suffix = initialName.substring(initialName.lastIndexOf("."));
 
         // 重命名文件名
         String newName = uuid + suffix;
@@ -76,10 +76,10 @@ public class FileServiceImpl implements FileService {
         Date date = new Date();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
 
-        // 文件的目录
+        // 文件目录
         String list = uploadPath + "/" + simpleDateFormat.format(date) + "/";
 
-        // 文件的路径
+        // 文件路径
         String filePath = list + newName;
 
         try {
@@ -110,7 +110,7 @@ public class FileServiceImpl implements FileService {
         // 将数据放入FileData中
         fileData.setSize(file.getSize());
         fileData.setType(file.getContentType());
-        fileData.setOldName(oldName);
+        fileData.setinitialName(initialName);
         fileData.setNewName(uuid);
         fileData.setFilePath(filePath);
 
@@ -128,8 +128,8 @@ public class FileServiceImpl implements FileService {
 
         FileData fileData = fileMapper.selectFileDataByNewNme(newName);
 
-        String oldName = fileData.getOldName();
-        String suffix = oldName.substring(oldName.lastIndexOf("."));
+        String initialName = fileData.getinitialName();
+        String suffix = initialName.substring(initialName.lastIndexOf("."));
 
         rs.addHeader("Content-Disposition", "attachment;fileName=" + newName + suffix);
         if (fileData == null) {
