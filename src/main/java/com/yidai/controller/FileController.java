@@ -26,6 +26,7 @@ public class FileController {
 
     /**
      * 根据uuid获取文件信息
+     *
      * @param newName 文件uuid
      * @return 文件元数据
      */
@@ -41,6 +42,7 @@ public class FileController {
 
     /**
      * 上传文件
+     *
      * @param file 上传的文件
      * @return 返回uuid
      */
@@ -50,7 +52,6 @@ public class FileController {
         Map map = new HashMap();
         if (file == null) {
             System.out.println("空");
-
         }
 
         map = fileService.uploadFile(file);
@@ -60,14 +61,13 @@ public class FileController {
 
     /**
      * 根据uuid下载文件
+     *
      * @param newName
      * @return
      */
     @ApiOperation(value = "根据uuid下载文件")
     @GetMapping("download/{uuid}")
     public void downloadFile(@PathVariable("uuid") String newName, HttpServletResponse rs) {
-
         fileService.downloadFile(newName, rs);
-
     }
 }
