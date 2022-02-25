@@ -5,7 +5,7 @@
 
 
     <insert id="insertFileData" parameterType="com.yidai.pojo.FileData" keyProperty="id">
-        insert into file_data(`size`, `type`, old_name, new_name, file_path)
+        insert into file_data(`size`, `type`, initial_name, new_name, file_path)
         values (#{size}, #{type}, #{initialName}, #{newName}, #{filePath})
     </insert>
 

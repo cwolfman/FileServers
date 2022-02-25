@@ -8,7 +8,7 @@ CREATE TABLE `file_data`
     `id`          BIGINT(0)                                               NOT NULL AUTO_INCREMENT COMMENT 'id',
     `size`        INT(0)                                                  NOT NULL COMMENT '文件大小',
     `type`        VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '文件类型',
-    `old_name`    VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '文件原始名',
+    `initial_name`    VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '文件原始名',
     `new_name`    VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '文件新名',
     `file_path`   VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '文件路径',
     `create_time` DATETIME(0)                                             NOT NULL DEFAULT CURRENT_TIMESTAMP(0) COMMENT '创建时间',
